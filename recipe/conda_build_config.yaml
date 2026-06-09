@@ -4,5 +4,5 @@ c_stdlib_version:   # [osx]
 MACOSX_SDK_VERSION: # [osx]
   - 15.5            # [osx]
 
-github_actions_labels:             # [osx]
-  - blacksmith-6vcpu-macos-latest  # [osx]
+github_actions_labels:                   # [osx]
+  - namespace-profile-6cpu-on-osx-arm64  # [osx]
