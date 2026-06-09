@@ -186,8 +186,6 @@ outputs:
       skip:
         # opengpu server has sm_70 card that's not supported by CUDA 13 anymore
         - match(cuda_compiler_version, ">=13.0")
-        # missing onnxruntime
-        - match(python, ">=3.14")
         # redundant but: https://github.com/prefix-dev/rattler-build/issues/2110
         - match(python, "<3.11")
       # splitting off what conda packages under etc/conda/test-files when using test.files.source
