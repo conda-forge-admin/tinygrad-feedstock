@@ -282,7 +282,7 @@ outputs:
                 # somehow fails to stat (or create?!) a temporary file
                 - 'tests_to_skip += " or test_save_all_dtypes"'
                 - 'tests_to_skip += " or (TestDiskTensorMovement and test_slice)"'
-            - if: linux and aarch64 and cuda_compiler_version != "None"
+            - if: linux and aarch64 and cuda_compiler_version == "None"
               then:
                 # expects array([0]), gets array([255])
                 - 'tests_to_skip += " or test_float_cast_to_unsigned_underflow"'
