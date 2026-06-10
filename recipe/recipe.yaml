@@ -37,7 +37,7 @@ source:
       # nvcc complains if clang is too new, even with v20, which upstream uses
       - patches/0009-allow-newer-clang-with-nvcc.patch
       - patches/0010-avoid-redundant-definitions-of-INFINITY-NAN.patch
-      - if: osx and osx_arm64
+      - if: osx and arm64
         then:
           - patches/0011-force-metal-version.patch
   - if: osx and arm64
