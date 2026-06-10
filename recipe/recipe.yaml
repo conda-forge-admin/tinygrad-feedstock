@@ -254,6 +254,7 @@ outputs:
             - 'import os'
             # $PYTHON makes Tensor device autoselection choke
             - 'os.environ.pop("PYTHON", None)'
+            - 'os.environ.setdefault("ONEDNN_VERBOSE", "all")'
             - 'tests_to_skip = "_not_a_real_test"'
             - if: linux
               then:
