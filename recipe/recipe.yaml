@@ -302,11 +302,6 @@ outputs:
             - if: osx and arm64
               then:
                 - 'tests_to_skip += " or (TestOpsUint8 and test_cast)"'
-                # Some tests are missing bfloat symbols, maybe due to bw compat for metal 2.x?
-                - 'os.environ.setdefault("CFLAGS", "")'
-                - 'os.environ["CFLAGS"] += " -D__HAVE_BFLOAT__=1"'
-                - 'os.environ.setdefault("CXXFLAGS", "")'
-                - 'os.environ["CXXFLAGS"] += " -D__HAVE_BFLOAT__=1"'
             - if: osx and x86_64
               then:
                 # signed int32 overflow

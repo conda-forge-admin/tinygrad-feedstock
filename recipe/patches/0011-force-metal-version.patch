@@ -1,7 +1,7 @@
 From 25dace2b95b3afd1edffc5297faab75fa2def22c Mon Sep 17 00:00:00 2001
 From: jaimergp <jaimergp@users.noreply.github.com>
 Date: Wed, 10 Jun 2026 09:45:06 +0200
-Subject: [PATCH 11/11] Force set MTLLanguageVersion3_1 for packaging tests
+Subject: [PATCH 11/11] Force set MTLLanguageVersion3_1 for packaging tests to provide bfloat symbols
 
 ---
  tinygrad/runtime/ops_metal.py | 2 ++
