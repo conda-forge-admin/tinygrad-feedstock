@@ -191,6 +191,8 @@ outputs:
         - match(cuda_compiler_version, ">=13.0")
         # redundant but: https://github.com/prefix-dev/rattler-build/issues/2110
         - match(python, "<3.11")
+        # onnxruntime not available in this platform/python combo
+        - osx and x86_64 and match(python, ">=3.14")
       # splitting off what conda packages under etc/conda/test-files when using test.files.source
       script:
         - if: unix
