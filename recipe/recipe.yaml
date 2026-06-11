@@ -237,7 +237,8 @@ outputs:
             - pybind11
             - pycocotools
             - pillow
-            - safetensors
+            # Makes test/unit/test_disk_tensor.py::TestSafetensors::test_load_supported_types fail
+            - safetensors <0.8.0dev0
             - sentencepiece
             - tabulate
             - tiktoken
