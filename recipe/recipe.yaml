@@ -187,8 +187,6 @@ outputs:
       name: tinygrad-tests
     build:
       skip:
-        # opengpu server has sm_70 card that's not supported by CUDA 13 anymore
-        - match(cuda_compiler_version, ">=13.0")
         # redundant but: https://github.com/prefix-dev/rattler-build/issues/2110
         - match(python, "<3.11")
         # onnxruntime not available in this platform/python combo
@@ -292,7 +290,7 @@ outputs:
               then:
                 # expects array([0]), gets array([255])
                 - 'tests_to_skip += " or test_float_cast_to_unsigned_underflow"'
-            - if: linux and aarch64 and match(python, ">=3.13") and (cuda_compiler_version == "None" or cuda_compiler_version == "12.9")
+            - if: linux and aarch64 and match(python, ">=3.13")
               then:
                 # These fail with: could not create a primitive descriptor for the ... primitive.
                 # Run workload with environment variable ONEDNN_VERBOSE=all to get additional diagnostic information.
