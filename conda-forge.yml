@@ -27,3 +27,4 @@ workflow_settings:
   build_workspace_dir: 
     - value: "C:\\bld\\"
       os: win
+  store_build_artifacts: true
